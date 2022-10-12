@@ -1,0 +1,5 @@
+twilio:
+  account_sid: // account for twilio
+  auth_token: // token for twilio
+  trial_number: // trial_number for twilio
+

@@ -1,0 +1,22 @@
+package gee.solution;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+@org.springframework.stereotype.Service
+public class Service {
+
+    public final SmsSender smsSender;
+
+    @Autowired
+    public Service(@Qualifier("twilio") TwilioSmsSender smsSender) {
+        this.smsSender = smsSender;
+    }
+
+    public void sendSms(SmsRequest smsRequest) {
+        smsSender.sendSms(smsRequest);
+
+    }
+
+
+}
